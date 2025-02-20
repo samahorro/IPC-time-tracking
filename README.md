@@ -2,7 +2,7 @@
 
 Time Measurement for Command Execution Using IPC
 
-This project involves creating two C++ programs that measure the time taken to execute a specified command from the command line using fork(), execvp(), and gettimeofday(). The programs utilize two different inter-process communication (IPC) mechanisms to share the starting time between the parent and child processes.
+Two C++ programs that measure the time taken to execute a specified command from the command line using fork(), execvp(), and gettimeofday(). The programs utilize two different inter-process communication (IPC) mechanisms to share the starting time between the parent and child processes.
 
 time_shm.c: This version uses shared memory to share the starting time between the parent and child processes. The child process writes the starting time to a shared memory region before executing the command. The parent process reads the starting time from shared memory after the child process terminates, calculates the elapsed time, and prints the result.
 
@@ -12,8 +12,6 @@ Both programs aim to measure the execution time of commands and report the elaps
 
 Files included:
 
-time_shm.c: Program using shared memory for IPC.
-time_shm_output.txt: Output of time_shm.c.
-time_pipe.c: Program using pipes for IPC.
-time_pipe_output.txt: Output of time_pipe.c.
+time_shm.cpp: Program using shared memory for IPC.
+time_pipe.cpp: Program using pipes for IPC.
 
